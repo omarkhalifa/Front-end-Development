@@ -36,7 +36,7 @@ http://www.liverpoolfc.nl/
 #### Screenshot(s) van de eerste pagina (small screen): 
 Home Liverpool fc 
 <br>
-<img src="images/Liverpool_Home.png" width=375px" alt="Homescherm Liverpool fc website">
+<img src="images/Liverpool_home.png" width=375px" alt="Homescherm Liverpool fc website">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 Info Liverpool fc
