@@ -12,18 +12,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Jij
 
-<details open>
-<summary>uitwerken voor kick-off werkgroep</summary>
-
 ### Auteur:
-Sanne 't Hooft (vervangen door jouw naam)
+Omar Khalifa (vervangen door jouw naam)
 
 #### Je startniveau:
-hier je startniveau (kies uit zwart, rood óf blauw)
+Afgelopen keren heb ik dit vak ook gevolgd, dit ging (suprise, suprise!) niet zo goed. Vandaar: BLAUW
 
 #### Je focus:
-hier je focus (kies uit responsive óf surface plane)
- 
+Mijn Focus ligt op het moment bij Responsive, als dit beter gaat dan verwacht en ik heb tijd dan ga ik kijken of ik over ga na surface.
 </details>
 
 
@@ -36,7 +32,7 @@ hier je focus (kies uit responsive óf surface plane)
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+<li> <a> <href="://www.liverpoolfc.nl/"/>
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 hier de naam van de pagina  
