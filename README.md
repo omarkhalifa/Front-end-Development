@@ -33,14 +33,10 @@ Mijn Focus ligt op het moment bij Responsive, als dit beter gaat dan verwacht en
 ### Je opdracht:
 http://www.liverpoolfc.nl/
 
-#### Screenshot(s) van de eerste pagina (small screen): 
-Home Liverpool fc 
-<br>
-<img src="images/Liverpool_home.png" width="500px" alt="Homescherm Liverpool fc website">
+#### Screenshot(s) van de eerste pagina (small screen): "Home Liverpool FC": 
+<img src="images/Liverpool_home.png" width="375px" alt="Homescherm Liverpool fc website">
 
-#### Screenshot(s) van de tweede pagina (small screen):
-Info Liverpool fc
-<br>
+#### Screenshot(s) van de tweede pagina (small screen): "Info Liverpool FC":
 <img src="images/Liverpool_info.png" width="375px" alt="infoscherm Liverpool fc website">
  
 </details>
