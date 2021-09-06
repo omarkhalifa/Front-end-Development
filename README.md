@@ -36,13 +36,13 @@ http://www.liverpoolfc.nl/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="100%" alt="omschrijving van de pagina">
-<img src="images/Liverpool_Home.png" width="100%" alt="Homescherm Liverpool fc website">
+<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+<img src="images/Liverpool_Home.png" width=375px" alt="Homescherm Liverpool fc website">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 hier de naam van de pagina  
 <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
-<img src="images/Liverpool_info.png" width="100%" alt="infoscherm Liverpool fc website">
+<img src="images/Liverpool_info.png" width="375px" alt="infoscherm Liverpool fc website">
  
 </details>
 
