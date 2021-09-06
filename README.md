@@ -32,7 +32,7 @@ Mijn Focus ligt op het moment bij Responsive, als dit beter gaat dan verwacht en
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-<li> <a> <href="://www.liverpoolfc.nl/"/>
+http://www.liverpoolfc.nl/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 hier de naam van de pagina  
