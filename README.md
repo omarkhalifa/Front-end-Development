@@ -13,7 +13,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Jij
 
 ### Auteur:
-Omar Khalifa (vervangen door jouw naam)
+Omar Khalifa
 
 #### Je startniveau:
 Afgelopen keren heb ik dit vak ook gevolgd, dit ging (suprise, suprise!) niet zo goed. Vandaar: BLAUW
@@ -36,11 +36,13 @@ http://www.liverpoolfc.nl/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+<img src="images/dummy-plaatje.jpg" width="100%" alt="omschrijving van de pagina">
+<img src="images/Liverpool_Home.png" width="100%" alt="Homescherm Liverpool fc website">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 hier de naam van de pagina  
 <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+<img src="images/Liverpool_info.png" width="100%" alt="infoscherm Liverpool fc website">
  
 </details>
 
