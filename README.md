@@ -29,18 +29,16 @@ Mijn Focus ligt op het moment bij Responsive, als dit beter gaat dan verwacht en
 ## Je website
 
 <details open>
-<summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
 http://www.liverpoolfc.nl/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+Home Liverpool fc 
 <img src="images/Liverpool_Home.png" width=375px" alt="Homescherm Liverpool fc website">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-hier de naam van de pagina  
+Info Liverpool fc
 <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 <img src="images/Liverpool_info.png" width="375px" alt="infoscherm Liverpool fc website">
  
