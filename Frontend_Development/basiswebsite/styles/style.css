@@ -1,0 +1,565 @@
+/* CSS Document */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+
+/* kleuren */
+
+:root {
+	--color-white: #fff;
+	--color-red: #e71a19;
+	--color-grey: #323232;
+	--color-green: #00a88e;
+	--color-blackgrey: #323232;
+	--color-black: #000000;
+	--color-black-trans: #000000 / 1.25;
+	
+
+	--background-color: #f2f2f2;
+
+
+	--ff-primary: Graphik, Arial, Helvetica, sans-serif;
+	--ff-secondary: Pridi, Arial, Helvetica, sans-serif;
+}
+
+/* einde kleuren */
+
+
+/* Fonts NOG AANPASSEN !!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@font-face {
+	font-family: "Graphik";
+	src: url("../fonts/Graphik-Font-Family/GraphikRegular.otf");
+}
+
+@font-face {
+	font-family: "Pridi";
+	src: url("../fonts/webfonts_Pridi-SemiBold/Pridi-SemiBold.ttf.woff");
+}
+
+/* einde Fonts NOG AANPASSEN !!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	max-width: 100vw;
+	text-transform: uppercase;
+}
+
+ header{
+	
+}
+
+h2 {
+	color: var(--color-red);
+	font-size: 1.2em;
+	padding: 0 0 0.7em 0;
+	border-bottom: 4px solid;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	max-height: auto;
+
+}
+
+
+/* bovenste balk */
+
+header section:nth-child(1) {
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	padding: 0px, 0px, 0px, 100px;
+
+	height: 1.7em;
+	width: 100vw;
+	box-shadow: 0px 1px 3px grey;
+	background-color: var(--background-color);
+
+
+}
+
+header section:nth-child(1) img {
+	width: 1.2em;
+}
+
+header section:nth-child(1) img:nth-child(2) {
+	width: .8em;
+	margin: .4em;
+	margin-right: 3em;
+
+
+}
+
+/* einde bovenste balk */
+
+
+
+
+
+
+/* balk met liverpool logo */
+
+nav {
+	display: flex;
+	flex-direction: row;
+	height: 4em;
+	box-shadow: 0px 1px 3px grey;
+	background-color: var(--color-white);
+}
+
+nav img {
+	margin: .25em;
+	margin-left: .5em;
+
+
+}
+
+nav img:first-of-type {
+	margin-right: 9em;
+	
+}
+
+
+
+nav img:nth-child(2),
+nav img:nth-child(3) {
+	width: 2.8em;
+	padding: 0.5em;
+	margin: .1em;
+
+}
+
+/* einde balk met liverpool logo */
+
+
+
+/* begin onzichtbare menu */
+
+header section:nth-of-type(2) {
+	display: none;
+}
+
+/* einde onzictbare menu */
+
+
+
+/* begin plaatje met liverpool vs chelsea NIET AF */
+
+body section:nth-of-type(1):not(header section:nth-of-type(1)) {
+	display: flex;
+	position: relative;
+}
+
+
+/* Afbeelding GRADIENT ER NOG OP ZETTEN, TEKST BETER LEESBAAR */
+body section:nth-of-type(1) img:nth-of-type(1):not(header section:nth-of-type(1) img, body section:nth-of-type(1) div img:nth-of-type(1)) {
+	width: 100%;
+	height: auto;
+	min-height: 12.5em;
+}
+
+body section:nth-of-type(1) h2 {
+	position: absolute;
+	top: 3em;
+	right: 2.2em;
+	bottom: 2em;
+	left: 1.8em;
+
+	font-size: 1.3em;
+	color: white;
+	border-bottom:none;
+	
+
+}
+
+
+/* wedstrijd verslag */
+body section:nth-of-type(1) h3 {
+	position: absolute;
+	top: 1em;
+	left: 2.7em;
+
+	padding: .3em .7em .2em .3em;
+
+	font-size: 0.8em;
+	color: var(--color-red);
+	background: var(--color-white);
+}
+
+/* beide een puntje */
+body section:nth-of-type(1) h4 {
+	position: absolute;
+	top: 3.8em;
+	left: 2.8em;
+
+	font-size: 0.8em;
+	color: white;
+
+}
+
+/* pijltjes */
+body section:nth-of-type(1) div:first-of-type {
+	position: absolute;
+	background: var(--color-green);
+	top: 3.5em;
+	bottom: 3.5em;
+	left: 0;
+
+	padding: .2em;
+	width: 1.2em;
+}
+
+
+
+body section:nth-of-type(1) div:nth-of-type(2) {
+	position: absolute;
+	background: var(--color-green);
+	top: 3.5em;
+	bottom: 3.5em;
+	right: 0;
+
+
+	padding: .2em;
+	width: 1.2em;
+}
+
+
+
+/* knopjes onderin */
+body section:nth-of-type(1) div:nth-of-type(3) {
+	position: absolute;
+	bottom: .5em;
+	left: 7.6em;
+
+	width: 1.75em;
+	height: .65em;
+
+	background-color: var(--color-red);
+}
+
+body section:nth-of-type(1) div:nth-of-type(4) {
+	position: absolute;
+	bottom: 1em;
+	left: 10em;
+
+	width: 1.75em;
+	height: .65em;
+
+	background-color: var(--color-white);
+}
+
+body section:nth-of-type(1) div:nth-of-type(5) {
+	position: absolute;
+	bottom: .5em;
+	left: 12.4em;
+
+	width: 1.75em;
+	height: .65em;
+
+	background-color: var(--color-red);
+}
+
+/* einde liverpool vs chelsea NIET AF */
+
+
+
+
+
+
+/* Speler van de maand */
+
+body section:nth-of-type(2) {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin: 1.25em;
+
+}
+
+
+body section:nth-of-type(2) img:first-of-type {
+	max-width: 100%;
+	max-height: auto;
+}
+
+
+
+body section section{
+	position:relative;
+	margin: 0em 1.25em 0em 1.25em;
+	border-top: 6px solid var(--color-blackgrey);
+	height:15em;
+}
+
+
+/* KOSTAS TSIMIKAS */
+body section:nth-of-type(2) section h3 {
+	position:absolute;
+	top:0em;
+	left: 0em;
+	
+	color: var(--color-black);
+	font-size: 1.5em;
+	max-width: 50%;
+	
+}
+
+
+body section:nth-of-type(2) section img {
+	position: absolute;
+	top: 0em;
+	right: 0em;
+	
+	max-width: 3em;
+	height: auto;
+	background:yellow;
+	
+	
+/* weghalen en aanpassen wat hier boven staat */
+	display: none;
+
+}
+
+/* KOSTAS TSIMIKAS */
+body section:nth-of-type(2) section h4 {
+	position:absolute;
+	bottom: 0em;
+	font-size: 3.25m;
+	background:yellow;
+	color: black;
+	
+	
+}
+
+body section:nth-of-type(2) h3:nth-of-type(1) {
+	position:absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+	color: var(--color-white);
+	font-size: .8em;
+	text-align:center;
+	background-color: var(--color-green);
+	height: 3.5em;
+	padding: 1.125em 0 0 0;	
+	
+}
+
+
+/* speler van de maand NOG NIET AF !!!!!!! */
+
+
+
+
+/* PROGRAMMA */
+body section:nth-of-type(3){
+	margin:1.25em;
+}
+
+body section:nth-of-type(3){
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	justify-content: center;
+	margin:1.25em;
+}
+
+body section:nth-of-type(3) h3{
+	color: var(--color-white);
+	background-color: var(--color-red);
+	text-align: center;
+	padding: 1em 0 0 0;
+	margin: -.25em 0 1em 0 ;
+	font-size:1em;
+	height: 3em;
+	
+	
+}
+
+body section:nth-of-type(3) img{
+	max-width: 4em;	
+	height: auto;
+	left: 35%;
+	right: 35%;
+	
+	background: yellow;
+}
+
+body section:nth-of-type(3) p{
+}
+
+body section:nth-of-type(3) p:first-of-type, body section:nth-of-type(3) p:nth-of-type(2){
+	color: var(--color-blackgrey);
+	text-align: center;
+	
+}
+
+
+body section:nth-child(4) h4{
+	text-align: center;
+	color:var(--color-red);
+	font-size:2em;
+	
+}
+
+
+body section:nth-child(4) ol{
+	list-style: none;
+	
+}
+
+body section:nth-child(4) ol li{
+	background-color: var(--color-blackgrey);
+}
+
+body section:nth-child(4) ol li p:first-child{
+	color: var(--color-red);
+}
+
+body section:nth-child(4) ol li p:nth-child(2){
+	color: var(--color-white);
+}
+
+/* EINDE PROGRAMMA NOG NIET KLAAR!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+/* LEDEN INFO */
+body section:nth-child(5){
+	margin: 0 0 2em 1.25em;
+	width: 10em;
+}
+
+body section:nth-child(5) h3{
+	color: var(--color-white);
+	background: var(--color-red);
+	font-size: .8em;
+	
+	height: 3.5em;
+	padding: 1.25em 0 0 1.5em;
+	margin: 0 0 1px 0;
+	
+}
+
+
+body section:nth-child(5) h3:nth-of-type(3){
+	padding: 1.25em 0 3.5em 1.5em;
+	line-height: 1.4em;
+}
+
+/* EINDE LEDEN INFO !!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
+
+
+/* FOTO ALBUMS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+body section:nth-child(6){
+	background-color: var(--color-red);
+	
+}
+
+body section:nth-child(6) h2{
+	color: var(--color-white);
+	text-align: center;
+	margin: 0 1.25em 1em 1.25em;
+	padding: 1em 0 0.5em 0;
+}
+
+body section:nth-child(6) img{
+	display: flex;
+	position: relative;
+	max-width: 80%;
+	right: 10%;
+	left: 10%;
+	
+}
+
+body section:nth-child(6) h3{
+	position: absolute;
+	background-color: yellow;
+	font-size: 1.5em;
+	
+}
+
+
+body section:nth-child(6) h4{
+	background-color: blue;
+}
+
+/* EINDE FOTO ALBUMS !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+
+/* SPONSOREN EN WAT TEKST */
+body section:nth-child(7){
+	margin: 0 1.25em 0 1.25em;
+	text-align: center;
+	border-bottom: hidden;
+}
+
+body section:nth-child(7) h2{
+	font-size: 1em;
+	color:var(--color-blackgrey);
+}
+
+
+body section:nth-child(7) h3{
+	color: var(--color-red);
+	font-size: 1em;
+	padding: 0 0 0.7em 0;
+	border-bottom: 4px solid;
+}
+
+body section:nth-child(8){
+	background: yellow;
+	display: flex;
+	overflow: hidden;
+}
+
+body section:nth-child(8){
+	margin: 1em 25% 1em 25%;
+}
+
+
+/* SPONSEREN EN WAT TEKST */
+
+footer {
+	background-color: var(--color-blackgrey);
+	padding: .6em 1em .6em 1em;
+}
+
+footer p{
+	font-size: .7em;
+	line-height: 4px;
+	color: var(--color-red);
+}
+
+footer p:nth-of-type(2){
+	color: var(--color-white);
+}
+
+
+
+
+
+
+/* begin onzichtbare menu */
+
+header section:nth-of-type(2) {
+	display: none;
+}
+
+/* einde onzictbare menu */
