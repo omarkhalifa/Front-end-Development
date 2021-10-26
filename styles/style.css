@@ -34,37 +34,19 @@ body {
 	margin: 0;
 	max-width: 100vw;
 	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
 }
 
 header {}
 
-h1 {
-	font-family: 'Lato', sans-serif;
-}
 
 h2 {
 	color: var(--color-red);
 	font-size: 1.2em;
 	padding: 0 0 0.7em 0;
 	border-bottom: 4px solid;
-	font-family: 'Lato', sans-serif;
 }
 
-h3 {
-	font-family: 'Lato', sans-serif;
-}
-
-h4	{
-	font-family: 'Lato', sans-serif;
-}
-
-h5 {
-	font-family: 'Lato', sans-serif;
-}
-
-p {
-	font-family: 'Lato', sans-serif;
-}
 
 img {
 	display: block;
@@ -74,14 +56,14 @@ img {
 }
 
 
-/* bovenste balk */
+/* bovenste balk 4vh*/
 
 header section:first-child {
 	display: flex;
 	justify-content: flex-end;
 	padding: 0px, 0px, 0px, 100px;
 
-	height: 1.7em;
+	height: 4vh;
 	width: 100vw;
 	box-shadow: 0px 1px 3px grey;
 	background-color: var(--background-color);
@@ -89,7 +71,7 @@ header section:first-child {
 	position: fixed;
 	top: 0;
 	z-index: 100;
-
+	
 }
 
 header section:nth-child(1) img {
@@ -104,19 +86,15 @@ header section:nth-child(1) img:nth-child(2) {
 
 }
 
-/* einde bovenste balk */
+/* einde bovenste balk 4vh */
 
 
-
-
-
-
-/* balk met liverpool logo */
+/* balk met liverpool logo 9vh = 13vh */
 
 nav {
 	display: flex;
 	flex-direction: row;
-	height: 4em;
+	height: 9vh;
 	width: 100vw;
 	box-shadow: 0px 1px 3px grey;
 	background-color: var(--color-white);
@@ -130,7 +108,7 @@ nav {
 
 nav img{
 	margin: .25em;
-	margin-left: .5em;
+	margin-left: 1em;
 
 
 }
@@ -146,41 +124,136 @@ nav img:nth-child(2),
 nav img:nth-child(3) {
 	width: 2.8em;
 	padding: 0.5em;
-	margin: .1em;
-
 }
 
-/* einde balk met liverpool logo */
+/* einde balk met liverpool logo 13vh */
 
 
 
-/* begin onzichtbare menu */
+/* begin onzichtbare menu 100vh*/
 
-header section:nth-of-type(2) {
-	display: none ;
+
+body header section:nth-of-type(2){
+	z-index: 9999999;
 }
 
-/* einde onzictbare menu */
+body header section:nth-of-type(2) section:first-of-type {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	
+	height: 27vh;
+	background-color: var(--background-color);
+	z-index: 1;
+	
+	margin: 12vh 0 0 0;
+	
+	box-shadow: none;
+	border-bottom: 1px solid black;
+}
+
+body header section:nth-of-type(2) section:first-of-type h2{
+	color: var(--color-grey);
+	background-color: var(--background-color);
+	border: none;
+	text-align: center;
+	font-size: 0.8em;
+	margin: 1.8em 0 0 0;
+}
+
+body header section:nth-of-type(2) section:first-of-type button{
+	background: var(--color-white);
+	border: none;
+	border-radius: 5px;
+	
+	margin: .5em 0 .5em 5vw;
+	padding: .75em 0 .75em 0;
+	
+	width: 90vw;
+}
+
+body header section:nth-of-type(2) section:first-of-type button:last-child{
+	padding: .75 0 1.5em 0;
+}
+
+
+/* 2e gedeelte onzichtbare menu */
+body header section:nth-of-type(2) section:nth-of-type(2){
+	background: var(--color-white);
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	
+	height: 100vh;
+	width: 100vw;
+	margin:26.5vh 0 0 0;
+}
+
+body header section:nth-of-type(2) section:nth-of-type(2) ul {
+	background: var(--background-color);
+	list-style: none;
+	
+	margin: 0;
+	padding: 0;
+	
+	
+	
+}
+
+body header section:nth-of-type(2) section:nth-of-type(2) ul li {
+	background: var(--color-white);
+	margin: 1px 0 0 0;
+	padding: .6em 0 .6em 1em;
+	font-size: .9em;
+	transition: .5s;
+}
+
+body header section:nth-of-type(2) section:nth-of-type(2) ul li:hover {
+	background: var(--color-green);
+	color: var(--color-white);
+}
+
+
+/* NOG ZICHTBAAR MAKEN!!!!!!!!!!!!!!!!!!!!!!!! */
+body header section:nth-of-type(2){
+	display: none;
+}
+/* NOG ZICHTBAAR MAKEN!!!!!!!!!!!!!!!!!!!!!!!! */
+	
+
+
+
+
+
+
+
+
+
+
 
 
 
 /* WEDSTRIJDVERSLAG NIET AF */
-
-body section:nth-of-type(1):not(header section:nth-of-type(1)) {
+body header + section {
 	display: flex;
 	position: relative;
-	margin: 5.7em 0 0 0;
+	margin: 12.5vh 0 0 0;
+	height: 30vh;
 }
 
 
 /* Afbeelding GRADIENT ER NOG OP ZETTEN, TEKST BETER LEESBAAR */
-body section:nth-of-type(1) img:nth-of-type(1):not(header section:nth-of-type(1) img, body section:nth-of-type(1) div img:nth-of-type(1)) {
-	width: 100%;
-	height: auto;
-	min-height: 12.5em;
+body header + section img:first-of-type(1) {
+	width: 100vw;
+	max-height: 40vh;
+	object-fit: cover;
+	
+	
 }
 
-body section:nth-of-type(1) h2 {
+body header + section h2 {
 	position: absolute;
 	top: 3em;
 	right: 2.2em;
@@ -190,13 +263,11 @@ body section:nth-of-type(1) h2 {
 	font-size: 1.3em;
 	color: white;
 	border-bottom: none;
-
-
+	
 }
 
-
-/* WEDSTRIJDVERSLAG */
-body section:nth-child(2) h3 {
+	/* WEDSTRIJDVERSLAG */
+body header + section h3 {
 	position: absolute;
 	top: 1em;
 	left: 2.7em;
@@ -210,54 +281,48 @@ body section:nth-child(2) h3 {
 }
 
 /* beide een puntje */
-body section:nth-of-type(1) h4 {
+body header + section h4 {
 	position: absolute;
 	top: 3.8em;
 	left: 2.8em;
 
 	font-size: 0.8em;
 	color: white;
-
 }
+
 
 /* pijltjes */
-body section:nth-of-type(1) div:first-of-type {
-	position: absolute;
-	background: var(--color-green);
+body header + section button {
 	
-	top: 3.5em;
-	bottom: 3.5em;
+	position: absolute;
+	background-color: var(--color-green);
+	color: var(--color-white);
+	font-size: 1.2em;
+	border: none;
+	height: 40%;
+	
+	padding: .2em;
+	width: 1em;
+	
+	top: 30%;
+	bottom:30%;
+	
+	transition: .5s;
+}
+
+body header + section button:hover{
+	background-color: var(--color-grey);
+}
+
+body header + section button:first-of-type {
 	left: 0;
-
-	padding: .2em;
-	width: 1.2em;
-	
 }
 
-
-
-body section:nth-of-type(1) div:nth-of-type(2) {
-	position: absolute;
-	background: var(--color-green);
-	top: 3.5em;
-	bottom: 3.5em;
+body header + section button:nth-of-type(2) {
 	right: 0;
-
-
-	padding: .2em;
-	width: 1.2em;
 }
 
-
-body section:nth-of-type(1) div img {
-	margin: 2em 0 0 0;
-}
-
-
-
-/* knopjes onderin */
-
-body section:nth-of-type(1) div:nth-of-type(3) {
+body header + section div:first-of-type {
 	position: absolute;
 	bottom: .5em;
 	left: 34.5%;
@@ -267,9 +332,10 @@ body section:nth-of-type(1) div:nth-of-type(3) {
 
 	background-color: var(--color-red);
 	box-shadow: 0 0 3px #000000;
+	
 }
 
-body section:nth-of-type(1) div:nth-of-type(4) {
+body header + section div:nth-of-type(2) {
 	position: absolute;
 	bottom: 1em;
 	left: 45%;
@@ -279,9 +345,10 @@ body section:nth-of-type(1) div:nth-of-type(4) {
 
 	background-color: var(--color-white);
 	box-shadow: 0 0 3px #000000;
+	
 }
 
-body section:nth-of-type(1) div:nth-of-type(5) {
+body header + section div:nth-of-type(3) {
 	position: absolute;
 	bottom: .5em;
 	left: 55.5%;
@@ -292,7 +359,6 @@ body section:nth-of-type(1) div:nth-of-type(5) {
 	background-color: var(--color-red);
 	box-shadow: 0 0 3px #000000;
 }
-
 /* WEDSTRIJD VERSLAG MOET NOG EEN DONKERE LAAG OVER DE AFBEELDING */
 
 
@@ -300,9 +366,20 @@ body section:nth-of-type(1) div:nth-of-type(5) {
 
 
 
-/* Speler van de maand */
 
-body section:nth-of-type(2) {
+
+
+
+
+
+
+
+
+
+
+
+/* Speler van de maand */
+body > section:nth-of-type(2) {
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -310,22 +387,23 @@ body section:nth-of-type(2) {
 	
 	height: 78vh;
 	border-bottom: 3px solid var(--color-red);
+	
+	
 
 }
 
 
-body section:nth-of-type(2) img:first-of-type {
+body > section:nth-of-type(2) img:first-of-type {
 	max-width: 100%;
-	max-height: auto;
-	margin: 0;
+	max-height: 40vh;
+	object-fit: cover;
 }
 
 
 
-body section section {
+body > section section {
 	position: relative;
 	display: flex;
-	top: -5.7em;
 	width: 90%;
 	left:1em;
 	border-top: 6px solid var(--color-blackgrey);
@@ -333,8 +411,8 @@ body section section {
 }
 
 
-/* KOSTAS TSIMIKAS */
-body section:nth-of-type(2) section h3 {
+/* Mohamed salah */
+body > section:nth-of-type(2) section h3 {
 	position: absolute;
 	top: -.3em;
 	left: 0em;
@@ -347,40 +425,43 @@ body section:nth-of-type(2) section h3 {
 }
 
 
-/* griekenland vlag */
-body section:nth-of-type(2) section img:nth-child(2) {
+/* egyptische vlag */
+body > section:nth-of-type(2) section img:nth-child(2) {
 	position: absolute;
+	width: 12vw;
+	max-height: auto;
+	right: 0;
+	top: 2vh;
 	
-	display: none;
 	
 }
 
-/* 21 */
-body section:nth-of-type(2) section h4 {
-	font-size: 6em;
+/* 11 */
+body > section:nth-of-type(2) section h4 {
+	font-size: 5.5em;
 	color: var(--color-black);
-	opacity: 10%;
+	opacity: 7.5%;
 	
 	
 	position: absolute;
-	top: -.95em;
-	left: 1.75em;
+	top: -.7em;
+	right: .5em;
 	
 }
 
-body section:nth-of-type(2) section p {
+body > section:nth-of-type(2) section p {
 	position: absolute;
 	padding: .1em .1em .1em .1em;
 	height: 1em;
 	
 }
 
-body section:nth-of-type(2) section p:first-of-type{
+body > section:nth-of-type(2) section p:first-of-type{
 	top: 5em;
 	color: var(--color-black);
 }
 	
-body section:nth-of-type(2) section p:nth-of-type(2){
+body > section:nth-of-type(2) section p:nth-of-type(2){
 	top: 6.2em;
 	left: 0;
 	
@@ -389,10 +470,7 @@ body section:nth-of-type(2) section p:nth-of-type(2){
 }
 	
 
-
-
-
-body section:nth-of-type(2) h3:nth-child(4) {
+body > section:nth-of-type(2) h3:nth-child(4) {
 	position: absolute;
 	right: 0;
 	bottom: -0.9em;
@@ -404,30 +482,41 @@ body section:nth-of-type(2) h3:nth-child(4) {
 	background-color: var(--color-green);
 	height: 3.5em;
 	padding: 1.125em 0 0 0;
+	transition: 0.5s;
 
 }
 
 
-body section:nth-of-type(2) h3:nth-child(4):hover{
+body > section:nth-of-type(2) h3:nth-child(4):hover{
 	background-color: var(--color-blackgrey);
+	color: var(--color-white);
+	
 }
-
-
 /* speler van de maand NOG NIET AF !!!!!!! */
 
 
 
 
-/* PROGRAMMA */
 
+
+
+
+
+
+
+
+
+
+
+/* PROGRAMMA */
 body section:nth-of-type(3) {
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	justify-content: center;
 	margin: 1.25em;
-	height: 90vh;
-	border-bottom: 3px solid var(--color-red);
+	height: 75vh;
+	border-bottom: 5px solid var(--color-red);
 }
 
 body section:nth-of-type(3) h3 {
@@ -470,14 +559,16 @@ body section:nth-child(4) h4 {
 body section:nth-child(4) ol {
 	list-style: none;
 	padding: 0 0 0 0;
-
+	margin: 0;
+	
 }
 
 body section:nth-child(4) ol li {
 	background-color: var(--color-blackgrey);
-	height: 2.3em;
-	margin: 0.2em 0 0 0;
-	
+	height: 2.5em;
+	margin: 1px 0 0 0;	
+	display: flex;
+	justify-content: center;
 }
 
 
@@ -485,11 +576,11 @@ body section:nth-child(4) ol li {
 body section:nth-child(4) ol li p{
 	display: inline-block;
 	font-size: 0.8em;
+	padding: 0 .5em 0 0;
 }
 
 body section:nth-child(4) ol li p:first-child {
 	color: var(--color-red);
-	margin: 0 0 0 0.5em;
 	
 }
 
@@ -505,10 +596,13 @@ body section:nth-child(4) ol li:hover{
 
 body section:nth-child(4) ol li p:first-child:hover {
 	color: var(--color-blackgrey);
-	
 }
-
 /* EINDE PROGRAMMA NOG NIET KLAAR!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+
+
 
 
 
@@ -518,25 +612,32 @@ body section:nth-child(5) {
 	width: 10em;
 }
 
-body section:nth-child(5) h3 {
+body section:nth-child(5) button {
 	color: var(--color-white);
 	background: var(--color-red);
-	font-size: .8em;
-
+	font-size: 0.8em;
+	border-style: none;
+	text-transform: uppercase;
+	
+	width: 12.5em;
 	height: 3.5em;
-	padding: 1.25em 0 0 1.5em;
+	padding: 1.25em 0 1.25em 1.5em;
 	margin: 0 0 1px 0;
 
+	text-align: left;
+	
+	cursor: pointer;
+	transition: 0.5s;
 }
 
 
-body section:nth-child(5) h3:hover{
+body section:nth-child(5) button:hover{
 	background: var(--color-green);
 }
 
 
-body section:nth-child(5) h3:nth-of-type(3) {
-	padding: 1.25em 0 3.5em 1.5em;
+body section:nth-child(5) button:nth-of-type(3) {
+	padding: 1.25em 0 3.75em 1.5em;
 	line-height: 1.4em;
 }
 
@@ -546,8 +647,17 @@ body section:nth-child(5) h3:nth-of-type(3) {
 
 
 
-/* FOTO ALBUMS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
+
+
+
+
+
+
+
+
+
+/* FOTO ALBUMS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 body section:nth-child(6) {
 	background-color: var(--color-red);
 	display: flex;
@@ -600,27 +710,31 @@ body section:nth-child(6) article h3 {
 	
 	color: var(--color-white);
 }
-
 /* EINDE FOTO ALBUMS !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 
 
 
-/* SPONSOREN EN WAT TEKST */
+
+
+
+
+
+
+
+
+
+/* BEETJE TEKST */
 body section:nth-child(7) {
 	margin: 2em 1.25em 0 1.25em;
 	text-align: center;
-
 }
 
 body section:nth-child(7) h2 {
 	font-size: 1.1em;
 	color: var(--color-blackgrey);
 	border: none;
-	
-	
 }
-
 
 body section:nth-child(7) h3 {
 	color: var(--color-red);
@@ -630,6 +744,9 @@ body section:nth-child(7) h3 {
 	border-bottom: 4px solid;
 }
 
+
+
+/* SPONSOREN */
 body section:nth-child(8) {
 	display: flex;
 	overflow: scroll;
@@ -640,32 +757,22 @@ body section:nth-child(8) {
 }
 
 
-/* SPONSEREN EN WAT TEKST */
 
+
+/* FOOTER */
 footer {
 	background-color: var(--color-blackgrey);
-	padding: .6em 1em .6em 1em;
+	padding: .3em 1em .3em 1em;
 }
 
 footer p {
-	font-size: .7em;
-	line-height: 4px;
+	font-size: .6em;
+	line-height: 1.5em;
 	color: var(--color-red);
 }
 
-footer p:nth-of-type(2) {
+footer p a{
 	color: var(--color-white);
+	text-decoration: none;
+	
 }
-
-
-
-
-
-
-/* begin onzichtbare menu */
-
-header section:nth-of-type(2) {
-	display: none;
-}
-
-/* einde onzictbare menu */
