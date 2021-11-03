@@ -23,34 +23,37 @@
 	<!-- balk bovenin -->
 	<header>
 
-		<section>
-			<img src="images/user.svg" />
-			<img src="images/arrow-down-sign-to-navigate.svg" />
-
-
-		</section>
+		<div>
+			<img src="images/user.svg" alt="inloggen" />
+			<img src="images/arrow-down-sign-to-navigate.svg" alt="inloggen" />
+		</div>
 
 
 		<!-- navigatie -->
 
 		<nav>
-			<img src="images/liverpool_logo.png" />
-			<img src="images/search.svg" />
-			<img src="images/list.svg" />
+			<img src="images/liverpool_logo.png" alt="liverpool f.c." />
+			<img src="images/search.svg" alt="zoeken" />
+			<button>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 
 		</nav>
 
 		<!-- ONZICHTBARE MENU -->
-		
-		<section>
+
+		<nav>
+
 			<section>
 				<h2>Snel naar</h2>
 				<button> Kaartjes kopen</button>
 				<button> Fotoalbum bekijken</button>
-				<button>Lid worden</button>
+				<button> Lid worden</button>
 			</section>
 
-			<section>
+			<div>
 				<ul>
 					<li>Home</li>
 					<li>Nieuws</li>
@@ -62,8 +65,8 @@
 					<li>Contact</li>
 					<li></li>
 				</ul>
-			</section>
-		</section>
+			</div>
+		</nav>
 
 
 	</header>
@@ -71,19 +74,20 @@
 	<!-- WEDSTRIJDVERSLAG -->
 
 	<section>
-		
-		<img src="images/560.jpeg" />
+
+
+		<img src="images/560.jpeg" alt="spelers" />
 		<h2> Verslag Liverpool F.C. - Chelsea </h2>
 		<h3> wedstrijdverslag</h3>
 		<h4> Beide een puntje</h4>
 
-		<button> &#60 </button>
-		<button> &#62 </button>
+		<button> &#60</button>
+		<button> &#62</button>
 
 		<div></div>
 		<div></div>
 		<div></div>
-		
+
 	</section>
 
 
@@ -92,11 +96,15 @@
 
 	<section>
 		<h2>Speler van de maand</h2>
-		<img src="images/mosalah.jpg" />
+		<video controls poster="images/mosalah.jpg" alt="Mohamed Salah Goals">
+			<source src="MoSalahGoals.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+
+		</video>
 
 		<section>
 			<h3> Mohamed Salah </h3>
-			<img src="images/egypt.png" />
+			<img src="images/egypt.png" alt="egyptische vlag" />
 			<h4>11</h4>
 			<p>Positie:</p>
 			<p>Aanvaller</p>
@@ -118,10 +126,10 @@
 		<h2> Programma </h2>
 		<h3> Za 18 september 2021 16:00 </h3>
 
-		<img src="images/liverpool.png" />
+		<img src="images/liverpool.png" alt="Liverpool FC" />
 		<p> Liverpool FC
 		<h4>vs.</h4>
-		<img src="images/crystalpalace.png" />
+		<img src="images/crystalpalace.png" Alt="Crystal Palace" />
 		<p> Crystal palace</p>
 
 		<ol>
@@ -160,18 +168,33 @@
 
 		<h1> Foto Albums</h1>
 
-		<article>
-			<img src="images/lelijkman.jpg" />
-			<h2>Meeting utrecht</h2>
-			<h3> 15-06-2018</h3>
-		</article>
+		<ul>
+
+			<li><img src="images/lelijkman.jpg" alt="Meeting Utrecht" />
+				<h2>Meeting utrecht</h2>
+				<h3> 15-06-2021</h3>
+			</li>
+
+			<li>
+				<img src="images/alsindag.jpg" alt="Alsindag 2020" />
+				<h2>Alsindag 2020</h2>
+				<h3> 11-12-2020</h3>
+			</li>
+
+			<li>
+				<img src="images/Meetraindag.jpg" alt="Alsindag 2020" />
+				<h2>Meetraindag</h2>
+				<h3> 26-03-2020</h3>
+			</li>
+
+		</ul>
 
 	</section>
 
 
-	
+
 	<!-- beetje tekst -->
-	
+
 	<section>
 
 		<h2>Association of liverpool supporters in the netherlands</h2>
@@ -181,19 +204,34 @@
 
 	<!-- sponsoren -->
 
-	<section>
-		<img src="images/sponsoren/bandwerk.png" />
-		<img src="images/sponsoren/boldking.jpeg" />
-		<img src="images/sponsoren/coolshop.jpg" />
-		<img src="images/sponsoren/subsidesport.jpeg" />
-	</section>
+	<div>
 
+		<ul>
+			<li>
+				<div>
+					<p>Sponser worden?</p>
+				</div>
+			</li>
 
+			<li><img src="images/sponsoren/bandwerk.png" alt="sponser" /></li>
+
+			<li><img src="images/sponsoren/boldking.jpeg" alt="sponser" /></li>
+
+			<li><img src="images/sponsoren/coolshop.jpg" alt="sponser" /></li>
+
+			<li><img src="images/sponsoren/subsidesport.jpeg" alt="sponser" /></li>
+
+			<li><img src="images/sponsoren/52.jpeg" alt="sponser" /></li>
+
+		</ul>
+
+	</div>
 
 
 	<footer>
 		<p>trotse communicatiepartner van alsin:
-		<a href="http://www.bandwerk.nl">Bandwerk internet- en reclamebureau</a></p>
+			<a href="http://www.bandwerk.nl">Bandwerk internet- en reclamebureau</a>
+		</p>
 	</footer>
 
 

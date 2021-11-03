@@ -20,10 +20,6 @@
 
 
 	--background-color: #f2f2f2;
-
-
-	--ff-primary: Graphik, Arial, Helvetica, sans-serif;
-	--ff-secondary: Pridi, Arial, Helvetica, sans-serif;
 }
 
 
@@ -37,7 +33,11 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
-header {}
+header {
+	font-family: 'Lato', sans-serif;
+}
+
+
 
 
 h2 {
@@ -56,9 +56,11 @@ img {
 }
 
 
-/* bovenste balk 4vh*/
+/********************/
+/* BOVENSTE BALK */
+/********************/
 
-header section:first-child {
+header div:first-child {
 	display: flex;
 	justify-content: flex-end;
 	padding: 0px, 0px, 0px, 100px;
@@ -67,18 +69,18 @@ header section:first-child {
 	width: 100vw;
 	box-shadow: 0px 1px 3px grey;
 	background-color: var(--background-color);
-	
+
 	position: fixed;
 	top: 0;
-	z-index: 100;
-	
+	z-index: 9999;
+
 }
 
-header section:nth-child(1) img {
+header div:first-child img {
 	width: 1.2em;
 }
 
-header section:nth-child(1) img:nth-child(2) {
+header div:first-child img:nth-child(2) {
 	width: .8em;
 	margin: .4em;
 	margin-right: 3em;
@@ -86,27 +88,30 @@ header section:nth-child(1) img:nth-child(2) {
 
 }
 
-/* einde bovenste balk 4vh */
 
 
-/* balk met liverpool logo 9vh = 13vh */
+
+/*************/
+/* NAVIGATIE */
+/*************/
 
 nav {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	height: 9vh;
 	width: 100vw;
 	box-shadow: 0px 1px 3px grey;
 	background-color: var(--color-white);
-	
+
 	position: fixed;
 	top: 1.65em;
-	z-index: 99;
+	z-index: 9998;
 }
 
 
 
-nav img{
+nav img {
 	margin: .25em;
 	margin-left: 1em;
 
@@ -115,94 +120,200 @@ nav img{
 
 nav img:first-of-type {
 	margin-right: 9em;
-
 }
 
 
 
-nav img:nth-child(2),
-nav img:nth-child(3) {
+nav img:nth-child(2) {
 	width: 2.8em;
 	padding: 0.5em;
 }
 
-/* einde balk met liverpool logo 13vh */
+nav:first-of-type button {
+	position: relative;
 
+	appearance: none;
+	border: none;
+	background: none;
 
+	margin: .6em 0 0 0;
+	
+	width: 4em;
+	height: 4em;
+	background-color: var(--color-white);
 
-/* begin onzichtbare menu 100vh*/
-
-
-body header section:nth-of-type(2){
-	z-index: 9999999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	transition: .5s;
 }
 
-body header section:nth-of-type(2) section:first-of-type {
+nav button:hover span{
+	background-color: var(--color-white);
+}
+
+nav button span {
+	position: absolute;
+	background-color: var(--color-green);
+	width: 3em;
+	height: 3px;
+	
+	transform-origin: 50% 1px;
+	transition:.5s;
+}
+
+nav button span:nth-of-type(1) {
+	transform:translatey(-1em);
+}
+
+nav button span:nth-of-type(3) {
+	transform:translatey(1em);
+}
+
+
+nav:first-of-type button:hover {
+	color: var(--color-white);
+	background-color: var(--color-green);
+	transform: scale(.8);
+
+}
+
+nav button.draai {
+	transform: rotate(90deg);
+	background-color: var(--color-white);
+	
+}
+
+nav button.draai:hover {
+	background-color: var(--color-green);
+}
+
+nav button.draai span{
+	background-color: var(--color-green);
+}
+
+nav button.draai:hover span{
+	background-color: var(--color-white);
+}
+nav button.draai span:nth-of-type(1){
+	transform: rotate(45deg);
+}
+
+nav button.draai span:nth-of-type(2){
+	display: none;
+	transition: .3s;
+}
+
+nav button.draai span:nth-of-type(3){
+	transform: rotate(-45deg);
+}
+
+
+
+
+
+/********************/
+/* HAMBURGER MENU */
+/********************/
+
+body header nav:nth-of-type(2) {
+	transform: translateY(-100vh);
+	transition: .5s;
+	z-index: 9997;
+	
+}
+
+body header nav:nth-of-type(2).omlaag {
+	transform: translateY(0);
+	transition: .5s;
+}
+
+body header nav:nth-of-type(2) section:first-of-type {
 	position: fixed;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	
-	height: 27vh;
+
+	height: 28vh;
 	background-color: var(--background-color);
-	z-index: 1;
-	
-	margin: 12vh 0 0 0;
-	
+	z-index: 99999;
+
+	margin: 9vh 0 0 0;
+	width: 100vw;
+
 	box-shadow: none;
-	border-bottom: 1px solid black;
+	box-shadow: 0 0 1px #000000;
+
 }
 
-body header section:nth-of-type(2) section:first-of-type h2{
+
+body header nav:nth-of-type(2) section:first-of-type h2 {
+	margin: 1.1em 0 0 0;
+
 	color: var(--color-grey);
 	background-color: var(--background-color);
-	border: none;
-	text-align: center;
+
 	font-size: 0.8em;
-	margin: 1.8em 0 0 0;
+	text-align: center;
+
+	border: none;
+
+
 }
 
-body header section:nth-of-type(2) section:first-of-type button{
+body header nav:nth-of-type(2) section:first-of-type button {
+	margin: .5em 0 .5em 5vw;
+	padding: .1em 0 .1em 0;
+
+	width: 90%;
+
 	background: var(--color-white);
 	border: none;
 	border-radius: 5px;
 	
-	margin: .5em 0 .5em 5vw;
-	padding: .75em 0 .75em 0;
+	height: 2.75em;
 	
-	width: 90vw;
+	transition: .3s;
 }
 
-body header section:nth-of-type(2) section:first-of-type button:last-child{
+body header nav:nth-of-type(2) section:first-of-type button:hover{
+	background-color: var(--color-green);
+	color: var(--color-white);
+}
+
+body header nav:nth-of-type(2) section:first-of-type button:last-child {
 	padding: .75 0 1.5em 0;
 }
 
 
+
+
+
 /* 2e gedeelte onzichtbare menu */
-body header section:nth-of-type(2) section:nth-of-type(2){
+body header nav:nth-of-type(2) div {
 	background: var(--color-white);
 	position: fixed;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	
-	height: 100vh;
+
 	width: 100vw;
-	margin:26.5vh 0 0 0;
+	height: 60vh;
+	margin: 37vh 0 0 0;
+	
+	
 }
 
-body header section:nth-of-type(2) section:nth-of-type(2) ul {
+body header nav:nth-of-type(2) div ul {
 	background: var(--background-color);
 	list-style: none;
-	
+
 	margin: 0;
 	padding: 0;
-	
-	
-	
 }
 
-body header section:nth-of-type(2) section:nth-of-type(2) ul li {
+body header nav:nth-of-type(2) div ul li {
 	background: var(--color-white);
 	margin: 1px 0 0 0;
 	padding: .6em 0 .6em 1em;
@@ -210,18 +321,19 @@ body header section:nth-of-type(2) section:nth-of-type(2) ul li {
 	transition: .5s;
 }
 
-body header section:nth-of-type(2) section:nth-of-type(2) ul li:hover {
-	background: var(--color-green);
-	color: var(--color-white);
+body header nav:nth-of-type(2) div ul li:nth-of-type(8){
+	margin: 1px 0 1px 0;
 }
 
-
-/* NOG ZICHTBAAR MAKEN!!!!!!!!!!!!!!!!!!!!!!!! */
-body header section:nth-of-type(2){
+body header nav:nth-of-type(2) div ul li:last-of-type{
 	display: none;
 }
-/* NOG ZICHTBAAR MAKEN!!!!!!!!!!!!!!!!!!!!!!!! */
+
+body header nav:nth-of-type(2) div ul li:hover {
+	background: var(--color-green);
+	color: var(--color-white);
 	
+}
 
 
 
@@ -235,11 +347,24 @@ body header section:nth-of-type(2){
 
 
 
-/* WEDSTRIJDVERSLAG NIET AF */
+
+
+
+
+
+
+
+
+
+
+/********************/
+/* WEDSTRIJDVERSLAG */
+/********************/
+
 body header + section {
 	display: flex;
 	position: relative;
-	margin: 12.5vh 0 0 0;
+	margin: 12vh 0 0 0;
 	height: 30vh;
 }
 
@@ -250,7 +375,8 @@ body header + section img:first-of-type(1) {
 	max-height: 40vh;
 	object-fit: cover;
 	
-	
+
+
 }
 
 body header + section h2 {
@@ -263,10 +389,10 @@ body header + section h2 {
 	font-size: 1.3em;
 	color: white;
 	border-bottom: none;
-	
+
 }
 
-	/* WEDSTRIJDVERSLAG */
+/* WEDSTRIJDVERSLAG */
 body header + section h3 {
 	position: absolute;
 	top: 1em;
@@ -293,24 +419,24 @@ body header + section h4 {
 
 /* pijltjes */
 body header + section button {
-	
+
 	position: absolute;
 	background-color: var(--color-green);
 	color: var(--color-white);
 	font-size: 1.2em;
 	border: none;
 	height: 40%;
-	
+
 	padding: .2em;
 	width: 1em;
-	
+
 	top: 30%;
-	bottom:30%;
-	
+	bottom: 30%;
+
 	transition: .5s;
 }
 
-body header + section button:hover{
+body header + section button:hover {
 	background-color: var(--color-grey);
 }
 
@@ -332,7 +458,7 @@ body header + section div:first-of-type {
 
 	background-color: var(--color-red);
 	box-shadow: 0 0 3px #000000;
-	
+
 }
 
 body header + section div:nth-of-type(2) {
@@ -345,7 +471,7 @@ body header + section div:nth-of-type(2) {
 
 	background-color: var(--color-white);
 	box-shadow: 0 0 3px #000000;
-	
+
 }
 
 body header + section div:nth-of-type(3) {
@@ -359,6 +485,7 @@ body header + section div:nth-of-type(3) {
 	background-color: var(--color-red);
 	box-shadow: 0 0 3px #000000;
 }
+
 /* WEDSTRIJD VERSLAG MOET NOG EEN DONKERE LAAG OVER DE AFBEELDING */
 
 
@@ -378,26 +505,31 @@ body header + section div:nth-of-type(3) {
 
 
 
-/* Speler van de maand */
+/********************/
+/* SPELER V/D MAAND */
+/********************/
+
 body > section:nth-of-type(2) {
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	margin: 1.25em;
-	
-	height: 78vh;
+
+	height: 64vh;
 	border-bottom: 3px solid var(--color-red);
-	
-	
+
+
 
 }
 
 
-body > section:nth-of-type(2) img:first-of-type {
+body > section:nth-of-type(2) video {
+	
 	max-width: 100%;
-	max-height: 40vh;
+	max-height: 25vh;
 	object-fit: cover;
 }
+
 
 
 
@@ -405,7 +537,7 @@ body > section section {
 	position: relative;
 	display: flex;
 	width: 90%;
-	left:1em;
+	left: 1em;
 	border-top: 6px solid var(--color-blackgrey);
 	height: 25vh;
 }
@@ -432,8 +564,8 @@ body > section:nth-of-type(2) section img:nth-child(2) {
 	max-height: auto;
 	right: 0;
 	top: 2vh;
-	
-	
+
+
 }
 
 /* 11 */
@@ -441,34 +573,34 @@ body > section:nth-of-type(2) section h4 {
 	font-size: 5.5em;
 	color: var(--color-black);
 	opacity: 7.5%;
-	
-	
+
+
 	position: absolute;
 	top: -.7em;
 	right: .5em;
-	
+
 }
 
 body > section:nth-of-type(2) section p {
 	position: absolute;
 	padding: .1em .1em .1em .1em;
 	height: 1em;
-	
+
 }
 
-body > section:nth-of-type(2) section p:first-of-type{
+body > section:nth-of-type(2) section p:first-of-type {
 	top: 5em;
 	color: var(--color-black);
 }
-	
-body > section:nth-of-type(2) section p:nth-of-type(2){
+
+body > section:nth-of-type(2) section p:nth-of-type(2) {
 	top: 6.2em;
 	left: 0;
-	
+
 	color: var(--color-red);
-	
+
 }
-	
+
 
 body > section:nth-of-type(2) h3:nth-child(4) {
 	position: absolute;
@@ -487,12 +619,11 @@ body > section:nth-of-type(2) h3:nth-child(4) {
 }
 
 
-body > section:nth-of-type(2) h3:nth-child(4):hover{
+body > section:nth-of-type(2) h3:nth-child(4):hover {
 	background-color: var(--color-blackgrey);
 	color: var(--color-white);
-	
+
 }
-/* speler van de maand NOG NIET AF !!!!!!! */
 
 
 
@@ -508,7 +639,11 @@ body > section:nth-of-type(2) h3:nth-child(4):hover{
 
 
 
+
+/*************/
 /* PROGRAMMA */
+/*************/
+
 body section:nth-of-type(3) {
 	display: flex;
 	flex-direction: column;
@@ -535,7 +670,7 @@ body section:nth-of-type(3) img {
 	max-width: 15%;
 	margin: 0 42.5% 0 42.5%;
 	height: auto;
-	
+
 
 }
 
@@ -560,20 +695,25 @@ body section:nth-child(4) ol {
 	list-style: none;
 	padding: 0 0 0 0;
 	margin: 0;
-	
+
 }
 
 body section:nth-child(4) ol li {
 	background-color: var(--color-blackgrey);
 	height: 2.5em;
-	margin: 1px 0 0 0;	
+	margin: 1px 0 0 0;
 	display: flex;
 	justify-content: center;
+	transition: .5s;
+}
+
+body section:nth-child(4) ol li:hover {
+	background-color: var(--color-green);
 }
 
 
 
-body section:nth-child(4) ol li p{
+body section:nth-child(4) ol li p {
 	display: inline-block;
 	font-size: 0.8em;
 	padding: 0 .5em 0 0;
@@ -581,32 +721,25 @@ body section:nth-child(4) ol li p{
 
 body section:nth-child(4) ol li p:first-child {
 	color: var(--color-red);
-	
+	transition: .5s;
+
+}
+
+body section:nth-child(4) ol li:hover p:first-child {
+	color: var(--color-blackgrey);
 }
 
 
 body section:nth-child(4) ol li p:nth-child(2) {
 	color: var(--color-white);
-	
+
 }
 
-body section:nth-child(4) ol li:hover{
-	background-color: var(--color-green);
-}
 
-body section:nth-child(4) ol li p:first-child:hover {
-	color: var(--color-blackgrey);
-}
-/* EINDE PROGRAMMA NOG NIET KLAAR!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-
-
-
-
-
-
-
+/**************/
 /* LEDEN INFO */
+/**************/
+
 body section:nth-child(5) {
 	margin: 2em 0 2em 1.25em;
 	width: 10em;
@@ -618,20 +751,20 @@ body section:nth-child(5) button {
 	font-size: 0.8em;
 	border-style: none;
 	text-transform: uppercase;
-	
+
 	width: 12.5em;
 	height: 3.5em;
 	padding: 1.25em 0 1.25em 1.5em;
 	margin: 0 0 1px 0;
 
 	text-align: left;
-	
+
 	cursor: pointer;
 	transition: 0.5s;
 }
 
 
-body section:nth-child(5) button:hover{
+body section:nth-child(5) button:hover {
 	background: var(--color-green);
 }
 
@@ -641,7 +774,6 @@ body section:nth-child(5) button:nth-of-type(3) {
 	line-height: 1.4em;
 }
 
-/* EINDE LEDEN INFO !!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 
 
@@ -657,60 +789,96 @@ body section:nth-child(5) button:nth-of-type(3) {
 
 
 
-/* FOTO ALBUMS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/***************/
+/* FOTO ALBUMS */
+/***************/
+
 body section:nth-child(6) {
-	background-color: var(--color-red);
-	display: flex;
 	position: relative;
-	height: 48vh;
+	
+	height: 51vh;
+	width: 100vw;
+	
+	padding: 0 5% 0 5%;
+	
+	background-color: var(--color-red);
+	
+	overflow: scroll;
 }
 
 
 body section:nth-child(6) h1 {
 	position: absolute;
-	color: var(--color-white);
 	text-align: center;
 	right: 5%;
 	left: 5%;
 	
+	font-size: 1.2em;
+	color: var(--color-white);
 	
+	border-bottom: solid 4px var(--color-white);
+	padding: 0 0 .5em 0;
 }
 
-
-body section:nth-child(6) article:first-of-type img {
+body section:nth-child(6) ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
 	position: relative;
-	width: 80%;
-	max-height: auto;
-	top: 20%;
-	right: 10%;
-	left: 10%;
 	
-
+	height: 50vh;
+	
+	display: flex;
+	overflow: scroll;
 }
 
-body section:nth-child(6) article h2 {
+body section:nth-child(6) ul li{
+	position: relative;
+	
+	top: 3em;
+	height: 20em;
+	width: 100%;
+	
+	padding: 1em 0 0 0;
+	margin: 0 3em 0 0; 
+	
+	flex-shrink: 0;
+}
+
+body section:nth-child(6) ul li:last-of-type{
+	margin: 0;
+}
+
+body section:nth-child(6) ul li img{
 	position: absolute;
-	bottom: 11% ;
-	left: 15%;
-	color: var(--color-white);
-	font-size: 1.5em;
-	justify-content: center;
+	width: 100%;
+}
+
+body section:nth-child(6) ul li h2{
+	position: absolute;
+	
+	color:var(--color-white);
 	border: none;
-
+	
+	bottom: .5em;
+	font-size: 2em;
+	padding: .5em;
 }
 
-
-body section:nth-child(6) article h3 {
+body section:nth-child(6) ul li h3{
 	position: absolute;
-	left: 15%;
-	bottom: 12%;
-	text-transform: uppercase;
-	font-size: 1em;
 	
+	color: var(--color-red);
+	background-color: var(--color-white);
 	
-	color: var(--color-white);
+	padding: .3em 1.2em .3em .3em;
+	
+	font-size: .8em;
+	
+	bottom: 7em;
+	left: 1.5em;
+	
 }
-/* EINDE FOTO ALBUMS !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 
 
@@ -724,7 +892,15 @@ body section:nth-child(6) article h3 {
 
 
 
+
+
+
+
+
+/****************/
 /* BEETJE TEKST */
+/****************/
+
 body section:nth-child(7) {
 	margin: 2em 1.25em 0 1.25em;
 	text-align: center;
@@ -746,20 +922,101 @@ body section:nth-child(7) h3 {
 
 
 
+/*************/
 /* SPONSOREN */
-body section:nth-child(8) {
+/*************/
+
+body section:nth-child(7) + div {
+	height: 25vh;
+	min-width: 100vw;
+	
+	overflow: hidden;
+	
+}
+
+
+
+body section:nth-child(7) + div ul{
 	display: flex;
-	overflow: scroll;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	
+	width: 90vw;
+	margin: 3vw 5vw;
+	
+	list-style: none;
+	
+	animation: sponsoren 6s steps(2,end) infinite;
 }
 
-body section:nth-child(8) {
-	margin: 1em 25% 1em 25%;
+
+body section:nth-child(7) + div ul li{
+	min-width: calc(50vw);
+}
+
+body section:nth-child(7) + div ul li div {
+	width: 45vw;
+	height: 35vw;
+	
+	padding: 2.5em 0;
+	text-align: center;
+	background: var(--background-color);
+	border: solid var(--color-grey) 1px;
+}
+
+body section:nth-child(7) + div ul li img{
+	width: calc(50vw);
+	height: auto;	
+}
+
+@keyframes sponsoren{
+	from{
+		transform: translateX(0);
+	}
+	
+	
+	50% { 
+		transform: translateX(-110%);
+		
+	}
+	
+	to{
+		transform: translateX(-210%);
+	}
 }
 
 
 
 
+
+
+
+
+@keyframes sponsore {
+	0% {
+		transform: translateX(0);
+	}
+	33% {
+		transform: translateX(-100%);
+	}
+	66% {
+		transform: translateX(-200%);
+	}
+	100% {
+		transform: translateX(-300%);
+	}
+}
+
+
+
+
+
+
+
+/**********/
 /* FOOTER */
+/**********/
+
 footer {
 	background-color: var(--color-blackgrey);
 	padding: .3em 1em .3em 1em;
@@ -771,8 +1028,8 @@ footer p {
 	color: var(--color-red);
 }
 
-footer p a{
+footer p a {
 	color: var(--color-white);
 	text-decoration: none;
-	
+
 }
