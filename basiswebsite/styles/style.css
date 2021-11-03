@@ -321,6 +321,14 @@ body header nav:nth-of-type(2) div ul li {
 	transition: .5s;
 }
 
+body header nav:nth-of-type(2) div ul li:nth-of-type(8){
+	margin: 1px 0 1px 0;
+}
+
+body header nav:nth-of-type(2) div ul li:last-of-type{
+	display: none;
+}
+
 body header nav:nth-of-type(2) div ul li:hover {
 	background: var(--color-green);
 	color: var(--color-white);
@@ -507,7 +515,7 @@ body > section:nth-of-type(2) {
 	position: relative;
 	margin: 1.25em;
 
-	height: 78vh;
+	height: 64vh;
 	border-bottom: 3px solid var(--color-red);
 
 
@@ -515,11 +523,13 @@ body > section:nth-of-type(2) {
 }
 
 
-body > section:nth-of-type(2) img:first-of-type {
+body > section:nth-of-type(2) video {
+	
 	max-width: 100%;
-	max-height: 40vh;
+	max-height: 25vh;
 	object-fit: cover;
 }
+
 
 
 
@@ -784,12 +794,9 @@ body section:nth-child(5) button:nth-of-type(3) {
 /***************/
 
 body section:nth-child(6) {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
 	position: relative;
 	
-	height: 48vh;
+	height: 51vh;
 	width: 100vw;
 	
 	padding: 0 5% 0 5%;
@@ -813,83 +820,70 @@ body section:nth-child(6) h1 {
 	padding: 0 0 .5em 0;
 }
 
-body section:nth-child(6) div{
+body section:nth-child(6) ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
 	position: relative;
-	top: 20%;
+	
+	height: 50vh;
+	
+	display: flex;
+	overflow: scroll;
 }
 
-body section:nth-child(6) div section{
+body section:nth-child(6) ul li{
+	position: relative;
+	
+	top: 3em;
+	height: 20em;
+	width: 100%;
+	
+	padding: 1em 0 0 0;
+	margin: 0 3em 0 0; 
+	
+	flex-shrink: 0;
+}
+
+body section:nth-child(6) ul li:last-of-type{
+	margin: 0;
+}
+
+body section:nth-child(6) ul li img{
 	position: absolute;
+	width: 100%;
+}
+
+body section:nth-child(6) ul li h2{
+	position: absolute;
+	
+	color:var(--color-white);
 	border: none;
-	width: 100vw;
 	
-	transition: .3s;
-	
-}
-
-body section:nth-child(6) div section:hover{
-	transform: scale(.9);
-	box-shadow: 3px 3px 3px var(--color-grey);  
-}
-
-
-
-
-body section:nth-child(6) div section img{
-	position: absolute;
-	left: 10;
-	top: 0;
-	
-	width: auto;
-	height: 35vh;
-	
-}
-
-
-body section:nth-child(6) div section h2{
-	position: absolute;
-	color: var(--color-white);
-	border: none;
-	
+	bottom: .5em;
 	font-size: 2em;
-	
-	bottom: 0;
-	left: .4em;
-	
+	padding: .5em;
 }
 
-body section:nth-child(6) div section h3{
+body section:nth-child(6) ul li h3{
 	position: absolute;
+	
 	color: var(--color-red);
 	background-color: var(--color-white);
 	
-	font-size: .9em;
+	padding: .3em 1.2em .3em .3em;
 	
-	bottom: 5.4em;
-	left: 1.1em;
+	font-size: .8em;
 	
-	padding: .2em 1.2em .2em .7em;
+	bottom: 7em;
+	left: 1.5em;
 	
 }
 
 
 
-body section:nth-child(6) div section:nth-of-type(2){
-	position: absolute;
-	border: none;
-	width: 100vw;
-	height: 40vh;
-	
-	margin: 0 0 0 30em;
-	
-	overflow: hidden;
-}
 
-body section:nth-child(6) div section:nth-of-type(2) h2{
-	font-size: 1.8em;
-	bottom: .3em;
-	left: .6em;
-}
+
 
 
 
@@ -932,76 +926,90 @@ body section:nth-child(7) h3 {
 /* SPONSOREN */
 /*************/
 
-body section + div:not(body header nav:nth-of-type(2) div) {
+body section:nth-child(7) + div {
+	height: 25vh;
+	min-width: 100vw;
+	
+	overflow: hidden;
+	
+}
+
+
+
+body section:nth-child(7) + div ul{
 	display: flex;
 	flex-direction: row;
-	flex-wrap:nowrap;
+	flex-wrap: nowrap;
 	
-	margin: 1em 1.25em 1em 1.25em;
+	width: 90vw;
+	margin: 3vw 5vw;
 	
-	animation-name: sponsoren;
-	animation-duration: 20s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
-		
+	list-style: none;
+	
+	animation: sponsoren 6s steps(2,end) infinite;
 }
 
 
-body section + div div{
-	background-color: var(--background-color);
-	border: solid 1px;
-	border-color: var(--color-black-trans);
+body section:nth-child(7) + div ul li{
+	min-width: calc(50vw);
+}
+
+body section:nth-child(7) + div ul li div {
+	width: 45vw;
+	height: 35vw;
 	
-	padding: 1.3em 3.5em 1em 3.5em;
+	padding: 2.5em 0;
 	text-align: center;
+	background: var(--background-color);
+	border: solid var(--color-grey) 1px;
+}
+
+body section:nth-child(7) + div ul li img{
+	width: calc(50vw);
+	height: auto;	
+}
+
+@keyframes sponsoren{
+	from{
+		transform: translateX(0);
+	}
 	
-	transition: 0.2s;
-}
-
-body section + div div:hover{
-	transform: scale(.95);
-	border: solid 1px var(--color-green);
 	
-}
-
-body section + div div p{
-	color:var(--color-blackgrey);
-}
-
-body section + div div:hover p{
-	color:var(--color-green);
-}
-
-body section + div img {
-	display: block;
-	max-width: 40vw;
-	max-height: auto;
-	margin: 0 1em 0 1em;
+	50% { 
+		transform: translateX(-110%);
+		
+	}
+	
+	to{
+		transform: translateX(-210%);
+	}
 }
 
 
-@keyframes sponsoren {
+
+
+
+
+
+
+@keyframes sponsore {
 	0% {
-		transform:translateX(0);
+		transform: translateX(0);
 	}
-	
-	25% {
-		transform:translateX(-50%);	
+	33% {
+		transform: translateX(-100%);
 	}
-	
-	50% {
-		transform:translateX(-100%);	
+	66% {
+		transform: translateX(-200%);
 	}
-
-	75% {
-		transform:translateX(-160%);	
-	}
-	
 	100% {
-		transform:translateX(-210%);	
+		transform: translateX(-300%);
 	}
-	
 }
+
+
+
+
 
 
 
