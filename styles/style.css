@@ -55,6 +55,12 @@ img {
 
 }
 
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+}
+
 
 /********************/
 /* BOVENSTE BALK */
@@ -137,7 +143,7 @@ nav:first-of-type button {
 	background: none;
 
 	margin: .6em 0 0 0;
-	
+
 	width: 4em;
 	height: 4em;
 	background-color: var(--color-white);
@@ -145,11 +151,11 @@ nav:first-of-type button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
 	transition: .5s;
 }
 
-nav button:hover span{
+nav button:hover span {
 	background-color: var(--color-white);
 }
 
@@ -158,17 +164,17 @@ nav button span {
 	background-color: var(--color-green);
 	width: 3em;
 	height: 3px;
-	
+
 	transform-origin: 50% 1px;
-	transition:.5s;
+	transition: .5s;
 }
 
 nav button span:nth-of-type(1) {
-	transform:translatey(-1em);
+	transform: translatey(-1em);
 }
 
 nav button span:nth-of-type(3) {
-	transform:translatey(1em);
+	transform: translatey(1em);
 }
 
 
@@ -182,30 +188,31 @@ nav:first-of-type button:hover {
 nav button.draai {
 	transform: rotate(90deg);
 	background-color: var(--color-white);
-	
+
 }
 
 nav button.draai:hover {
 	background-color: var(--color-green);
 }
 
-nav button.draai span{
+nav button.draai span {
 	background-color: var(--color-green);
 }
 
-nav button.draai:hover span{
+nav button.draai:hover span {
 	background-color: var(--color-white);
 }
-nav button.draai span:nth-of-type(1){
+
+nav button.draai span:nth-of-type(1) {
 	transform: rotate(45deg);
 }
 
-nav button.draai span:nth-of-type(2){
+nav button.draai span:nth-of-type(2) {
 	display: none;
 	transition: .3s;
 }
 
-nav button.draai span:nth-of-type(3){
+nav button.draai span:nth-of-type(3) {
 	transform: rotate(-45deg);
 }
 
@@ -221,7 +228,7 @@ body header nav:nth-of-type(2) {
 	transform: translateY(-100vh);
 	transition: .5s;
 	z-index: 9997;
-	
+
 }
 
 body header nav:nth-of-type(2).omlaag {
@@ -271,13 +278,13 @@ body header nav:nth-of-type(2) section:first-of-type button {
 	background: var(--color-white);
 	border: none;
 	border-radius: 5px;
-	
+
 	height: 2.75em;
-	
+
 	transition: .3s;
 }
 
-body header nav:nth-of-type(2) section:first-of-type button:hover{
+body header nav:nth-of-type(2) section:first-of-type button:hover {
 	background-color: var(--color-green);
 	color: var(--color-white);
 }
@@ -301,8 +308,8 @@ body header nav:nth-of-type(2) div {
 	width: 100vw;
 	height: 60vh;
 	margin: 37vh 0 0 0;
-	
-	
+
+
 }
 
 body header nav:nth-of-type(2) div ul {
@@ -321,65 +328,128 @@ body header nav:nth-of-type(2) div ul li {
 	transition: .5s;
 }
 
-body header nav:nth-of-type(2) div ul li:nth-of-type(8){
+body header nav:nth-of-type(2) div ul li:nth-of-type(8) {
 	margin: 1px 0 1px 0;
 }
 
-body header nav:nth-of-type(2) div ul li:last-of-type{
+body header nav:nth-of-type(2) div ul li:last-of-type {
 	display: none;
 }
 
 body header nav:nth-of-type(2) div ul li:hover {
 	background: var(--color-green);
 	color: var(--color-white);
-	
+
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/********************/
-/* WEDSTRIJDVERSLAG */
-/********************/
-
-body header + section {
-	display: flex;
+/* voetbal */
+body header nav:nth-of-type(2) div div{
 	position: relative;
-	margin: 12vh 0 0 0;
-	height: 30vh;
+	height: 30px;
+	width: 30px;
+	
+	left: -10em;
+	
+	bottom: 8em;
+	animation: rollen 10s infinite linear;
 }
 
 
-/* Afbeelding GRADIENT ER NOG OP ZETTEN, TEKST BETER LEESBAAR */
-body header + section img:first-of-type(1) {
-	width: 100vw;
-	max-height: 40vh;
+body header nav:nth-of-type(2) div div img {
+	position: absolute;
+	bottom: 0em;
+	left: 0em;
+	
 	object-fit: cover;
 	
+	
 
 
+	animation:  draaien 2s infinite linear;
+	
 }
 
-body header + section h2 {
+
+@keyframes draaien{
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
+@keyframes rollen{
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(2500%);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********/
+/* NIEUWS */
+/**********/
+
+
+body header + section {
+	margin: 12.8vh 0 0 0;
+	height: 23vh;
+}
+
+body header + section ul:first-of-type {
+	display: flex;
+	overflow: hidden;
+
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior: none;
+}
+
+body header + section ul:first-of-type li {
+	position: relative;
+	width: 100%;
+
+	flex-shrink: 0;
+	scroll-snap-align: center;
+}
+
+body header + section ul:first-of-type li img {
+	width: 100%;
+	max-height: 50vh;
+	object-fit: cover;
+}
+
+body header + section ul:first-of-type li h2 {
 	position: absolute;
 	top: 3em;
 	right: 2.2em;
@@ -392,8 +462,7 @@ body header + section h2 {
 
 }
 
-/* WEDSTRIJDVERSLAG */
-body header + section h3 {
+body header + section ul:first-of-type li h3 {
 	position: absolute;
 	top: 1em;
 	left: 2.7em;
@@ -406,8 +475,8 @@ body header + section h3 {
 	box-shadow: 0 0 3px #000000;
 }
 
-/* beide een puntje */
-body header + section h4 {
+
+body header + section ul:first-of-type li h4 {
 	position: absolute;
 	top: 3.8em;
 	left: 2.8em;
@@ -416,75 +485,42 @@ body header + section h4 {
 	color: white;
 }
 
-
-/* pijltjes */
-body header + section button {
-
+body header + section:first-of-type ul:nth-of-type(2) li a div {
 	position: absolute;
-	background-color: var(--color-green);
-	color: var(--color-white);
-	font-size: 1.2em;
-	border: none;
-	height: 40%;
+	margin: 0;
+	padding: 0;
 
-	padding: .2em;
-	width: 1em;
+	width: 8%;
+	height: 1.75%;
 
-	top: 30%;
-	bottom: 30%;
-
-	transition: .5s;
-}
-
-body header + section button:hover {
-	background-color: var(--color-grey);
-}
-
-body header + section button:first-of-type {
-	left: 0;
-}
-
-body header + section button:nth-of-type(2) {
-	right: 0;
-}
-
-body header + section div:first-of-type {
-	position: absolute;
-	bottom: .5em;
-	left: 34.5%;
-
-	width: 7.5%;
-	height: 5%;
+	bottom: 29.5em;
 
 	background-color: var(--color-red);
 	box-shadow: 0 0 3px #000000;
-
 }
 
-body header + section div:nth-of-type(2) {
-	position: absolute;
-	bottom: 1em;
-	left: 45%;
 
-	width: 7.5%;
-	height: 5%;
-
+body header + section:first-of-type ul:nth-of-type(2) li:hover a div {
+	bottom: 29.75em;
 	background-color: var(--color-white);
-	box-shadow: 0 0 3px #000000;
-
 }
 
-body header + section div:nth-of-type(3) {
-	position: absolute;
-	bottom: .5em;
+
+
+body header + section:first-of-type ul:nth-of-type(2) li:first-of-type a div {
+	left: 32.5%;
+}
+
+body header + section:first-of-type ul:nth-of-type(2) li:nth-of-type(2) a div {
+
+	left: 44%;
+}
+
+body header + section:first-of-type ul:nth-of-type(2) li:nth-of-type(3) a div {
+
 	left: 55.5%;
-
-	width: 7.5%;
-	height: 5%;
-
-	background-color: var(--color-red);
-	box-shadow: 0 0 3px #000000;
 }
+
 
 /* WEDSTRIJD VERSLAG MOET NOG EEN DONKERE LAAG OVER DE AFBEELDING */
 
@@ -520,11 +556,11 @@ body > section:nth-of-type(2) {
 
 
 
+
 }
 
 
 body > section:nth-of-type(2) video {
-	
 	max-width: 100%;
 	max-height: 25vh;
 	object-fit: cover;
@@ -692,8 +728,6 @@ body section:nth-child(4) h4 {
 
 
 body section:nth-child(4) ol {
-	list-style: none;
-	padding: 0 0 0 0;
 	margin: 0;
 
 }
@@ -795,14 +829,14 @@ body section:nth-child(5) button:nth-of-type(3) {
 
 body section:nth-child(6) {
 	position: relative;
-	
+
 	height: 51vh;
 	width: 100vw;
-	
+
 	padding: 0 5% 0 5%;
-	
+
 	background-color: var(--color-red);
-	
+
 	overflow: scroll;
 }
 
@@ -812,72 +846,70 @@ body section:nth-child(6) h1 {
 	text-align: center;
 	right: 5%;
 	left: 5%;
-	
+
 	font-size: 1.2em;
 	color: var(--color-white);
-	
+
 	border-bottom: solid 4px var(--color-white);
 	padding: 0 0 .5em 0;
 }
 
-body section:nth-child(6) ul{
+body section:nth-child(6) ul {
 	margin: 0;
-	padding: 0;
-	list-style: none;
 	position: relative;
-	
+
 	height: 50vh;
-	
+
 	display: flex;
 	overflow: scroll;
 }
 
-body section:nth-child(6) ul li{
+body section:nth-child(6) ul li {
 	position: relative;
-	
+
 	top: 3em;
 	height: 20em;
 	width: 100%;
-	
+
 	padding: 1em 0 0 0;
-	margin: 0 3em 0 0; 
-	
+	margin: 0 3em 0 0;
+
 	flex-shrink: 0;
 }
 
-body section:nth-child(6) ul li:last-of-type{
+body section:nth-child(6) ul li:last-of-type {
 	margin: 0;
 }
 
-body section:nth-child(6) ul li img{
+body section:nth-child(6) ul li img {
 	position: absolute;
 	width: 100%;
 }
 
-body section:nth-child(6) ul li h2{
+body section:nth-child(6) ul li h2 {
 	position: absolute;
-	
-	color:var(--color-white);
+
+	color: var(--color-white);
 	border: none;
-	
+
 	bottom: .5em;
 	font-size: 2em;
 	padding: .5em;
 }
 
-body section:nth-child(6) ul li h3{
+body section:nth-child(6) ul li h3 {
 	position: absolute;
-	
+
 	color: var(--color-red);
 	background-color: var(--color-white);
-	
+
 	padding: .3em 1.2em .3em .3em;
-	
+
 	font-size: .8em;
-	
+
 	bottom: 7em;
 	left: 1.5em;
-	
+
 }
 
 
@@ -929,58 +961,51 @@ body section:nth-child(7) h3 {
 body section:nth-child(7) + div {
 	height: 25vh;
 	min-width: 100vw;
-	
+
 	overflow: hidden;
-	
+
 }
 
 
 
-body section:nth-child(7) + div ul{
+body section:nth-child(7) + div ul {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	
+
 	width: 90vw;
 	margin: 3vw 5vw;
-	
-	list-style: none;
-	
-	animation: sponsoren 6s steps(2,end) infinite;
+
+
+	animation: sponsoren 30s infinite linear;
 }
 
 
-body section:nth-child(7) + div ul li{
+body section:nth-child(7) + div ul li {
 	min-width: calc(50vw);
 }
 
 body section:nth-child(7) + div ul li div {
 	width: 45vw;
 	height: 35vw;
-	
+
 	padding: 2.5em 0;
 	text-align: center;
 	background: var(--background-color);
 	border: solid var(--color-grey) 1px;
 }
 
-body section:nth-child(7) + div ul li img{
+body section:nth-child(7) + div ul li img {
 	width: calc(50vw);
-	height: auto;	
+	height: auto;
 }
 
-@keyframes sponsoren{
-	from{
+@keyframes sponsoren {
+	from {
 		transform: translateX(0);
 	}
-	
-	
-	50% { 
-		transform: translateX(-110%);
-		
-	}
-	
-	to{
+
+	to {
 		transform: translateX(-210%);
 	}
 }
