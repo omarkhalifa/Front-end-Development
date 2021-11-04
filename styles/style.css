@@ -128,14 +128,56 @@ nav img:first-of-type {
 	margin-right: 9em;
 }
 
-
-
-nav img:nth-child(2) {
-	width: 2.8em;
-	padding: 0.5em;
+nav input{
+	display: none;
+		
 }
 
-nav:first-of-type button {
+nav input.tonen{
+	display: block;
+	position: absolute;
+	top: 0.2em;
+	bottom: 0;
+	left: 0;
+	width: 70%;
+	
+	border: none;
+	padding: 0 0 0 1em;
+	
+	text-transform: uppercase;
+	
+	transition: 1s;
+
+}
+
+nav:first-of-type button:first-of-type{
+	position: relative;
+	appearance: none;
+	border: none;
+	background: none;
+	
+	
+	width: 4.2em;
+	height: 50px;
+	
+	top: .75em;
+}
+
+
+nav:first-of-type button:first-of-type img:nth-of-type(2) {
+	
+	background-image: url(../images/search.png) no-repeat;
+	height: 50px;
+	width: 
+	
+}
+
+nav:first-of-type button:first-of-type img:nth-of-type(2).tonen{
+	background: url(../images/216785_cancel_x_delete_icon%20.png) no-repeat;
+	background-color: white;
+}
+
+nav:first-of-type button:nth-of-type(2) {
 	position: relative;
 
 	appearance: none;
@@ -143,9 +185,9 @@ nav:first-of-type button {
 	background: none;
 
 	margin: .6em 0 0 0;
+	
+	width: 4.2em;
 
-	width: 4em;
-	height: 4em;
 	background-color: var(--color-white);
 
 	display: flex;
@@ -155,11 +197,15 @@ nav:first-of-type button {
 	transition: .5s;
 }
 
-nav button:hover span {
+
+
+
+
+nav button:nth-of-type(2):hover span {
 	background-color: var(--color-white);
 }
 
-nav button span {
+nav button:nth-of-type(2) span {
 	position: absolute;
 	background-color: var(--color-green);
 	width: 3em;
@@ -169,50 +215,50 @@ nav button span {
 	transition: .5s;
 }
 
-nav button span:nth-of-type(1) {
+nav button:nth-of-type(2) span:nth-of-type(1) {
 	transform: translatey(-1em);
 }
 
-nav button span:nth-of-type(3) {
+nav button:nth-of-type(2) span:nth-of-type(3) {
 	transform: translatey(1em);
 }
 
 
-nav:first-of-type button:hover {
+nav button:nth-of-type(2):hover {
 	color: var(--color-white);
 	background-color: var(--color-green);
 	transform: scale(.8);
 
 }
 
-nav button.draai {
+nav button:nth-of-type(2).draai {
 	transform: rotate(90deg);
 	background-color: var(--color-white);
 
 }
 
-nav button.draai:hover {
+nav button:nth-of-type(2).draai:hover {
 	background-color: var(--color-green);
 }
 
-nav button.draai span {
+nav button:nth-of-type(2).draai span {
 	background-color: var(--color-green);
 }
 
-nav button.draai:hover span {
+nav button:nth-of-type(2).draai:hover span {
 	background-color: var(--color-white);
 }
 
-nav button.draai span:nth-of-type(1) {
+nav button:nth-of-type(2).draai span:nth-of-type(1) {
 	transform: rotate(45deg);
 }
 
-nav button.draai span:nth-of-type(2) {
+nav button:nth-of-type(2).draai span:nth-of-type(2) {
 	display: none;
 	transition: .3s;
 }
 
-nav button.draai span:nth-of-type(3) {
+nav button:nth-of-type(2).draai span:nth-of-type(3) {
 	transform: rotate(-45deg);
 }
 
