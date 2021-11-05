@@ -63,6 +63,7 @@ ol {
 
 a{
 	text-decoration: none;
+	color: var(--color-black);
 }
 
 
@@ -158,7 +159,7 @@ nav:first-of-type button:first-of-type{
 	position: relative;
 	appearance: none;
 	border: none;
-	background: none;
+	background: non;
 	
 	
 	width: 4.2em;
