@@ -61,6 +61,10 @@ ol {
 	padding: 0;
 }
 
+a{
+	text-decoration: none;
+}
+
 
 /********************/
 /* BOVENSTE BALK */
@@ -887,7 +891,7 @@ body section:nth-child(6) {
 }
 
 
-body section:nth-child(6) h1 {
+body section:nth-child(6) h2 {
 	position: absolute;
 	text-align: center;
 	right: 5%;
@@ -932,7 +936,7 @@ body section:nth-child(6) ul li img {
 	width: 100%;
 }
 
-body section:nth-child(6) ul li h2 {
+body section:nth-child(6) ul li h3 {
 	position: absolute;
 
 	color: var(--color-white);
@@ -943,7 +947,7 @@ body section:nth-child(6) ul li h2 {
 	padding: .5em;
 }
 
-body section:nth-child(6) ul li h3 {
+body section:nth-child(6) ul li h4 {
 	position: absolute;
 
 	color: var(--color-red);
