@@ -66,6 +66,10 @@ a{
 	color: var(--color-black);
 }
 
+:focus{
+	outline: none;
+}
+
 
 /********************/
 /* BOVENSTE BALK */
@@ -96,9 +100,7 @@ header div:first-child img:nth-child(2) {
 	margin: .4em;
 	margin-right: 3em;
 
-
 }
-
 
 
 
@@ -144,7 +146,8 @@ nav input.tonen{
 	top: 0.2em;
 	bottom: 0;
 	left: 0;
-	width: 70%;
+	width: 65%;
+	
 	
 	border: none;
 	padding: 0 0 0 1em;
@@ -159,28 +162,37 @@ nav:first-of-type button:first-of-type{
 	position: relative;
 	appearance: none;
 	border: none;
-	background: non;
+	background: none;
 	
 	
-	width: 4.2em;
+	width: 50px;
 	height: 50px;
 	
 	top: .75em;
-}
-
-
-nav:first-of-type button:first-of-type img:nth-of-type(2) {
 	
-	background-image: url(../images/search.png) no-repeat;
-	height: 50px;
-	width: 
+	background: url(../images/search.png) no-repeat;
 	
+	transition: 1s;
 }
 
-nav:first-of-type button:first-of-type img:nth-of-type(2).tonen{
-	background: url(../images/216785_cancel_x_delete_icon%20.png) no-repeat;
-	background-color: white;
+
+nav:first-of-type button:first-of-type.tonen{
+	background: url(../images/close.png) no-repeat;
+
+	transition: 1s;
+	position: absolute;
+	top: 1.5em;
+	right: 7em;	
 }
+
+nav:first-of-type button:first-of-type:hover {
+	transform: scale(0.8);
+}
+
+nav:first-of-type button:first-of-type:focus {
+	border: 2px solid var(--color-green);
+}
+
 
 nav:first-of-type button:nth-of-type(2) {
 	position: relative;
@@ -200,11 +212,13 @@ nav:first-of-type button:nth-of-type(2) {
 	align-items: center;
 
 	transition: .5s;
+	cursor: pointer;
 }
 
-
-
-
+nav:first-of-type button:nth-of-type(2):focus {
+	border: 2px solid green;
+	background-color(--background-color);
+}
 
 nav button:nth-of-type(2):hover span {
 	background-color: var(--color-white);
@@ -229,7 +243,7 @@ nav button:nth-of-type(2) span:nth-of-type(3) {
 }
 
 
-nav button:nth-of-type(2):hover {
+nav > button:nth-of-type(2):hover {
 	color: var(--color-white);
 	background-color: var(--color-green);
 	transform: scale(.8);
@@ -340,6 +354,11 @@ body header nav:nth-of-type(2) section:first-of-type button:hover {
 	color: var(--color-white);
 }
 
+body header nav:nth-of-type(2) section:first-of-type button:focus {
+	background-color: var(--color-red);
+	color: var(--color-white);
+}
+
 body header nav:nth-of-type(2) section:first-of-type button:last-child {
 	padding: .75 0 1.5em 0;
 }
@@ -389,9 +408,16 @@ body header nav:nth-of-type(2) div ul li:last-of-type {
 
 body header nav:nth-of-type(2) div ul li:hover {
 	background: var(--color-green);
-	color: var(--color-white);
-
 }
+
+body header nav:nth-of-type(2) div ul li:hover a{
+	color: var(--color-white);
+}
+
+body header nav:nth-of-type(2) div ul li a:focus{
+	background: var(--color-green);
+	color: var(--color-white);
+}	
 
 
 
@@ -444,29 +470,6 @@ body header nav:nth-of-type(2) div div img {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**********/
 /* NIEUWS */
 /**********/
@@ -492,6 +495,10 @@ body header + section ul:first-of-type li {
 
 	flex-shrink: 0;
 	scroll-snap-align: center;
+}
+
+body header + section ul:first-of-type li:focus {
+	border: 2px solid var(--color-red);
 }
 
 body header + section ul:first-of-type li img {
@@ -552,7 +559,7 @@ body header + section:first-of-type ul:nth-of-type(2) li a div {
 
 
 body header + section:first-of-type ul:nth-of-type(2) li:hover a div {
-	bottom: 29.75em;
+	bottom: 29.6em;
 	background-color: var(--color-white);
 }
 
@@ -604,10 +611,6 @@ body > section:nth-of-type(2) {
 
 	height: 64vh;
 	border-bottom: 3px solid var(--color-red);
-
-
-
-
 }
 
 
@@ -689,29 +692,36 @@ body > section:nth-of-type(2) section p:nth-of-type(2) {
 }
 
 
-body > section:nth-of-type(2) h3:nth-child(4) {
-	position: absolute;
-	right: 0;
-	bottom: -0.9em;
-	left: 0;
-
-	color: var(--color-white);
+body > section:nth-of-type(2) button{
+	appearance: none;
+	border: none;
+	
 	font-size: .8em;
+	font-weight: 400;
+	text-transform: uppercase;
 	text-align: center;
+	color: var(--color-white);
+	
+	
 	background-color: var(--color-green);
 	height: 3.5em;
-	padding: 1.125em 0 0 0;
+	padding: 0 0 0 0;
+	margin: 0 0 .5em 0;
 	transition: 0.5s;
 
 }
 
 
-body > section:nth-of-type(2) h3:nth-child(4):hover {
+body > section:nth-of-type(2) button:hover{
 	background-color: var(--color-blackgrey);
 	color: var(--color-white);
-
 }
 
+body > section:nth-of-type(2) button:focus{
+	background-color: var(--color-white);
+	color: var(--color-green);
+	border: 3px solid green;
+}
 
 
 
@@ -796,8 +806,6 @@ body section:nth-child(4) ol li:hover {
 	background-color: var(--color-green);
 }
 
-
-
 body section:nth-child(4) ol li p {
 	display: inline-block;
 	font-size: 0.8em;
@@ -850,6 +858,10 @@ body section:nth-child(5) button {
 
 
 body section:nth-child(5) button:hover {
+	background: var(--color-green);
+}
+
+body section:nth-child(5) button:focus {
 	background: var(--color-green);
 }
 

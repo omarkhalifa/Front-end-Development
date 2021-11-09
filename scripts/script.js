@@ -4,14 +4,15 @@ var Hamburger = document.querySelector("nav button:nth-of-type(2)");
 var MenuOmlaag = document.querySelector("body header nav:nth-of-type(2)");
 
 
-
 var Zoeken = document.querySelector("nav button:first-of-type");
 var Textfield = document.querySelector("nav input");
 
 
-
 var MeerNieuws = document.querySelector("body > button");
-var Uitschuiven = document.querySelector("body > section:nth-of-type(2)");
+var Uitschuiven = document.querySelector("body > div:nth-of-type(2)");
+
+var LikeKnop =document.querySelector("body > div:nth-of-type(2) button:first-of-type");
+var FeedbackLike = document.querySelector("header div:first-child div");
 
 // Einde variabelen
 
@@ -27,16 +28,26 @@ function menuTonen() {
 
 // Zoekfunctie (Beide pagina's)
 Zoeken.addEventListener("click", tonen);
+
 function tonen(){
 	Zoeken.classList.toggle("tonen");
 	Textfield.classList.toggle("tonen");
 }
 
-// Meer Nieuws Tonen (NIEUWS pagina)
+// Meer Nieuws Tonen (Nieuws pagina)
 MeerNieuws.addEventListener("click", Uitklappen);
+
 function Uitklappen(){
 	MeerNieuws.classList.toggle("uitklappen");
 	Uitschuiven.classList.toggle("uitklappen");
+}
+
+// Like Knop (Nieuws pagina)
+LikeKnop.addEventListener("click", Liken);
+
+function Liken(){
+	FeedbackLike.classList.toggle("like");
+	LikeKnop.classList.toggle("like");
 }
 
 
