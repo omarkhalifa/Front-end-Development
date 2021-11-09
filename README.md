@@ -209,7 +209,7 @@ De belangrijkste punten zijn:
  - Animaties: Feedback wanneer de like knop is ingedrukt, een rollende bal wanneer het hamburgermenu is uitgeklapt, "Meer nieuws laden..." knop op de nieuws-pagina.
  - Icon stylen en animeren: Hamburgermenu veranderd in een kruis wanneer erop wordt gedrukt.
  - Scroll Animaties: 3 verschillende manieren van scrollen in het homescherm.
- - Advanced positioning: De 2 bovenste balken in het scherm blijven beide boven in het scherm staan wanneer er naar beneden wordt gescrollt.
+ - Advanced positioning: De 2 bovenste balken in het scherm blijven beide boven in het scherm staan wanneer er naar beneden wordt gescrollt. (fixed)
  
  
  
