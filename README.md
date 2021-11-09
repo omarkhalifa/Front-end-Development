@@ -162,47 +162,29 @@ Deze week was mijn laptop bij een reparateur omdat deze niet meer aan ging. Hier
 ### Stand van zaken
 Ik ben verre van klaar. Ik wil dit moment gebruiken om wat vragen te stellen zodat ik mij goed kan voorbereiden op de herkansing.
 
-------------------------------------------------
+**********************************************************
  
- 
- 
- 
- 
- 
-#### Wat moet ik nog doen
-Tijdens de beoordeling kwam naar voren dat ik nog veel werk moest verrichten.
-De belangrijkste punten zijn:
-- De pagina die er is ziet er goed uit, de 2e pagina moet dezelfde uitstraling hebben.
-- Ik heb nu 1 pagina zonder interacties dus er moet nog een extra pagina komen + alle interacties/animaties moeten nog bedacht en gemaakt worden.
-- De toegankelijkheidstest moet nog gedaan worden.
+#### Wat moet ik nog doen (Herkansing
+ Tijdens de beoordeling kwam naar voren dat ik nog veel werk moest verrichten.
+ De belangrijkste punten zijn:
+ - De pagina die er is ziet er goed uit, de 2e pagina moet dezelfde uitstraling hebben.
+ - Ik heb nu 1 pagina zonder interacties dus er moet nog een extra pagina komen + alle interacties/animaties moeten nog bedacht en gemaakt worden.
+ - De toegankelijkheidstest moet nog gedaan worden.
 
-#### Wat ging goed
-- in vergelijking met de afgelopen jaren is het mij gelukt om 2 pagina's inclusief interacties te bouwen.
-- het opbouwen van de pagina's ging soepel hoewel ik redelijk vaak de elementen heb veranderd (bijvoorbeeld sections naar divs)
-- Naar mijn idee lijkt mijn website erg op de echte http://www.liverpool.nl website.
-- Ik heb regelmatig lol gehad in het maken van de website! (soms was het wel echt een kwelling)
+ *************************************************************************************************************************************************************************
  
- #### Waar had ik moeite mee
-- Sommige afbeeldingen werden niet goed weergeven of schuiven op het moment dat ze veranderen.
-- Animations blijf ik lastig vinden maar het lukt uiteindelijk wel redelijk.
- 
-#### Wat kan (nog) beter
-- Verschillende elementen kan/kon ik niet selecteren met [tab]
-- De like knop op de nieuwspagina werkt alleen bij het bovenste artikel. Na meerdere uren gezocht te hebben is het mij niet gelukt om deze bij de artikelen werkend te krijgen.
-- Wanneer de zoekbalk open is geklapt is het niet mogelijk om deze te selecteren met [TAB]
-- Sommige elementen schuuiven nog een beetje. Zo schuift de nieuws-section naar boven op het moment er op er 1 van de div's wordt gedrukt (Geen idee waarom...)
- 
-#### Toegangkelijkheidstest
+ #### Toegankelijkheidstest (6/11/21)
  Deze test heb ik gedaan met Joske Sambros (Laatste jaars CMD'er).
  
  Wat ging goed:
- - De elementen die geselecteerd werden waren goed te zien en er is makkelijk te navigeren met een muis en via touch.
- - De elementen
+ - Er is makkelijk door de website te navigeren door middel van muis en touch
+ - De belangrijke elementen zijn voorzien van een :hover :focus en :active state
+ - Er zit een goed contrast in de kleuren waardoor alles goed te zien is.
  
- Wat moet beter:
- - Sommige elementen die klikbaar horen te zijn zijn dat niet. 
- - Verschi
+ Bevindingen:
+ - Navigeren met tab of de pijltjes toetsen kan nog niet naar elk element en moet dus verbeterd worden.
  
+ **************************************************************************************************************************************************************************
  
  #### Surface Plane
  - Video/Geluid: Home pagina, Video van Mohamed Salah
@@ -211,36 +193,40 @@ De belangrijkste punten zijn:
  - Scroll Animaties: 3 verschillende manieren van scrollen in het homescherm.
  - Advanced positioning: De 2 bovenste balken in het scherm blijven beide boven in het scherm staan wanneer er naar beneden wordt gescrollt. (fixed)
  
+ #### Wat ging goed
+ - In vergelijking met de afgelopen jaren is het mij gelukt om 2 pagina's inclusief interacties te bouwen.
+ - het opbouwen van de pagina's ging soepel hoewel ik redelijk vaak de elementen heb veranderd (bijvoorbeeld sections naar divs)
+ - Naar mijn idee lijkt mijn website erg op de echte http://www.liverpool.nl website.
+ - Ik heb regelmatig lol gehad in het maken van de website! (soms was het wel echt een kwelling)
  
+ #### Waar had ik moeite mee
+ - Sommige afbeeldingen werden niet goed weergeven of schuiven op het moment dat ze veranderen.
+ - Animations blijf ik lastig vinden maar het lukt uiteindelijk wel redelijk.
  
+ #### Wat kan (nog) beter
+ - Verschillende elementen kan/kon ik niet selecteren met [tab].
+ - De like knop op de nieuwspagina werkt alleen bij het bovenste artikel. Na meerdere uren gezocht te hebben is het mij niet gelukt om deze bij alle artikelen werkend te krijgen.
+ - Wanneer de zoekbalk open is geklapt is het niet mogelijk om deze te selecteren met [TAB].
+ - Sommige elementen schuiven nog een beetje. Zo schuift de nieuws-section naar boven op het moment er op er 1 van de div's wordt gedrukt (waarschijnlijk omdat de section onder de fixed navigatie schuift. Geen idee hoe ik dit op kan lossen.
+ - Het facebook logo wil niet verschijnen wanneer ik het in github upload maar als ik mijn eigen code open is deze wel te zien.
  
- 
- 
- 
- 
- 
- 
+## AFBEELDINGEN
 
-### Screenshot(s)
-
-hier screenshot(s) van je eindresultaat
-
-</details>
-
-
-
-
+ Homepagina
+<img src="images/homepagina.png" width="414px" alt="homepagina">
+ 
+ Nieuwspagina
+<img src="images/nieuwspagina.png" width="414px" alt="nieuwspagina">
+ 
+ **************************************************************************************************************************************************************************
 
 ## Bronnenlijst
-
-<details open>
-<summary>continu bijhouden terwijl je werkt</summary>
-
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
-
-1. verschillende Huiswerk opdrachten / de oefeningen (positioneren - Flexbox - Animeren - Javascript) 
+ 
+1. Verschillende Huiswerk opdrachten / de oefeningen (positioneren, Flexbox, Animeren,  Javascript, etc....) 
 2. Learn to build Carousel using pure CSS - https://www.youtube.com/watch?v=vnQNb9fXP9o&ab_channel=CarbonRider 
 3. Play multiple CSS animations at the same time - https://stackoverflow.com/questions/26986129/play-multiple-css-animations-at-the-same-time
-4. CSS overflow Property https://www.w3schools.com/cssref/pr_pos_overflow.asp
+4. CSS overflow Property - https://www.w3schools.com/cssref/pr_pos_overflow.asp
+5. Carousel met bolltetjes - https://codepen.io/shooft/pen/vYZMKbM
+6. Pure CSS Image Slider Using Only HTML & CSS - https://www.youtube.com/watch?v=3MoRr5sudO0&ab_channel=DeltatyCode
 
 </details>
