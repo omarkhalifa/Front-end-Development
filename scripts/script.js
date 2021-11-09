@@ -11,7 +11,7 @@ var Textfield = document.querySelector("nav input");
 var MeerNieuws = document.querySelector("body > button");
 var Uitschuiven = document.querySelector("body > div:nth-of-type(2)");
 
-var LikeKnop =document.querySelector("body > div:nth-of-type(2) button:first-of-type");
+var LikeKnop =document.querySelector("body > div:nth-of-type(2) section button:first-of-type");
 var FeedbackLike = document.querySelector("header div:first-child div");
 
 // Einde variabelen

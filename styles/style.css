@@ -193,6 +193,10 @@ nav:first-of-type button:first-of-type:focus {
 	border: 2px solid var(--color-green);
 }
 
+nav:first-of-type button:first-of-type:active {
+	border: 2px solid var(--color-blackgrey);
+}
+
 
 nav:first-of-type button:nth-of-type(2) {
 	position: relative;
@@ -216,7 +220,12 @@ nav:first-of-type button:nth-of-type(2) {
 }
 
 nav:first-of-type button:nth-of-type(2):focus {
-	border: 2px solid green;
+	border: 2px solid var(--color-green);
+	background-color(--background-color);
+}
+
+nav:first-of-type button:nth-of-type(2):active {
+	border: 2px solid var(--color-blackgrey);
 	background-color(--background-color);
 }
 
@@ -355,9 +364,18 @@ body header nav:nth-of-type(2) section:first-of-type button:hover {
 }
 
 body header nav:nth-of-type(2) section:first-of-type button:focus {
-	background-color: var(--color-red);
-	color: var(--color-white);
+	background-color: var(--color-white);
+	color: var(--color-green);
+	border: 2px solid var(--color-green);
 }
+
+body header nav:nth-of-type(2) section:first-of-type button:active {
+	background-color: var(--color-white);
+	color: var(--color-black);
+	border: 2px solid var(--color-blackgrey);
+}
+
+
 
 body header nav:nth-of-type(2) section:first-of-type button:last-child {
 	padding: .75 0 1.5em 0;
@@ -419,7 +437,10 @@ body header nav:nth-of-type(2) div ul li a:focus{
 	color: var(--color-white);
 }	
 
-
+body header nav:nth-of-type(2) div ul li a:active{
+	background: var(--color-green);
+	color: var(--color-white);
+}	
 
 /* voetbal */
 body header nav:nth-of-type(2) div div{
@@ -499,6 +520,10 @@ body header + section ul:first-of-type li {
 
 body header + section ul:first-of-type li:focus {
 	border: 2px solid var(--color-red);
+}
+
+body header + section ul:first-of-type li:active {
+	border: 2px solid var(--color-blackgrey);
 }
 
 body header + section ul:first-of-type li img {
@@ -720,7 +745,13 @@ body > section:nth-of-type(2) button:hover{
 body > section:nth-of-type(2) button:focus{
 	background-color: var(--color-white);
 	color: var(--color-green);
-	border: 3px solid green;
+	border: 3px solid var(--color-green);
+}
+
+body > section:nth-of-type(2) button:active{
+	background-color: var(--color-white);
+	color: var(--color-blackgrey);
+	border: 3px solid var(--color-blackgrey);
 }
 
 
@@ -863,6 +894,12 @@ body section:nth-child(5) button:hover {
 
 body section:nth-child(5) button:focus {
 	background: var(--color-green);
+}
+
+body section:nth-child(5) button:active {
+	background: var(--color-white);
+	color: var(--color-green);
+	border: 3px solid var(--color-green);
 }
 
 
